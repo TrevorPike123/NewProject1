@@ -1,0 +1,203 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 2646,
+      "max": [
+        9.2775382995605469,
+        13.285102844238281,
+        15.378291130065918
+      ],
+      "min": [
+        -9.3728809356689453,
+        -13.670173645019531,
+        -14.74637508392334
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 31752,
+      "componentType": 5126,
+      "count": 2646,
+      "max": [
+        0.99942207336425781,
+        0.99971717596054077,
+        0.99974650144577026
+      ],
+      "min": [
+        -0.99936175346374512,
+        -0.99994039535522461,
+        -0.99995577335357666
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 2646,
+      "max": [
+        0.99990987777709961,
+        0.99993681907653809,
+        0.99996864795684814,
+        1
+      ],
+      "min": [
+        -0.99991625547409058,
+        -0.99723541736602783,
+        -0.99990856647491455,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 11022,
+      "max": [
+        2645
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Choges Craft Channel (https://sketchfab.com/sergish1)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/models/7b047ce9231f4f36a9c4e4713d7f1fc4",
+      "title": "Griffith Helmet from anime Berserk"
+    },
+    "generator": "Sketchfab-3.18.6",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 44088,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 63504,
+      "byteOffset": 44088,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 42336,
+      "byteOffset": 107592,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 149928,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Mesh_1005.rip",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.018692631274461746,
+        -0.99982529878616333,
+        0,
+        0,
+        0.99982529878616333,
+        0.018692631274461746,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.14573580026626587,
+        -0.23660871386528015,
+        0,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "534123508c9b4235afa8223007d09c6d.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
+
