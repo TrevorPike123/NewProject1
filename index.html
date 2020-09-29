@@ -6,19 +6,13 @@
     <script src="libs/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
-
-    <script>
-       var screen = document.querySelector("#screen");
-       screen.addEventListener("click", function() {
-           screen.setAttribute=("src", "assets/tv/textures/AttackonTitan.mp4");
-       });
-
-    </script>
+    
 </head>
 <body>
 
 <button class="unmute" onclick="playVideo();"></button>
 <a-scene background="color: #FAFAFA" scene-load>
+
     <a-assets>
         <a-asset-item id="couch" src="assets/couch/scene.gltf"></a-asset-item>
         <a-asset-item id="desk" src="assets/desk/scene.gltf"></a-asset-item>
@@ -29,9 +23,9 @@
         <a-asset-item id="fridge" src="assets/fridge/scene.gltf"></a-asset-item>
         <a-asset-item id="door" src="assets/door/scene.gltf"></a-asset-item>
         <a-asset-item id="tv" src="assets/tv/scene.gltf"></a-asset-item>
-        </video>
-        
+        <a-asset-item id="entertainmentCenter" src="assets/entertainment_center/scene.gltf"></a-asset-item>    
     </a-assets>
+    
     <a-sky color="#ECECEC"></a-sky>
     <a-entity position="54 1.5 12">
         <a-camera universal-controls>
@@ -46,6 +40,7 @@
           </a-entity>
         </a-camera>
     </a-entity>
+
     <a-obj-model src="assets/ANVILobj.obj" scale=".5 .5 .5" material="shader: standard; roughness: 1; src: url(images/anvil.jpg); repeat: 2 1" position= "64 -0.8 6 "></a-obj-model>
     <a-obj-model src="assets/mug2.obj" scale=".2 .2 .2" mtl="assets/mug2.mtl" position="68 1 6"></a-obj-model>
     <a-entity position="30 -0.5 0" gltf-model="#couch" scale=".007 .007 .007"></a-entity>
@@ -56,11 +51,12 @@
     <a-entity position="20.5 -0.5 -19.5" gltf-model="#cabnet" scale="30 30 30" ></a-entity>
     <a-entity position="21.8 -0.6 -12" gltf-model="#fridge" scale="1 1 1"></a-entity>
     <a-entity position="40 2.3 10" gltf-model="#door" scale="3 2.5 4"></a-entity>
-    <a-entity position="30 2 5" gltf-model="#tv" scale="1 1 1"></a-entity>
+    <a-entity position="30 1 8" gltf-model="#entertainmentCenter" scale="1 1 1" rotation="0 180 0"></a-entity>
     <a-entity geometry="primitive: box" position="30 3.5 9.8" scale="5.7 3.7 .24" material="shader: standard; roughness: 1; src: url(images/black.jpg); repeat: 4 2"></a-entity> 
-    <a-box material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="intersectable" position="66.4 2.72 -18.35"></a-box>
     <a-plane position="30 3.5 9.65" rotation="0 180 0" event-set__click="src: assets/tv/textures/AttackonTitan.mp4" sound="maxDistance: 6; volume: 1;" width="5.5" height="3.5" src="images/black.jpg" loop="false"></a-plane>
-
+    <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="intersectable"></a-box>
+    
+    
    
     <!-- Ceiling -->
     <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 7 -5" material="shader: flat; side: double; opacity: 1;
