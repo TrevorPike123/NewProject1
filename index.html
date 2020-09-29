@@ -2,21 +2,12 @@
 <head>
     <script src="libs/aframe.min.js"></script>
 
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
     <script>
-        AFRAME.registerComponent('pause-play', {
+        AFRAME.registerComponent('video_control', {
                 init: function() {
                     var video = document.querySelector('#aot');
-                    var controls = document.querySelector('#videoControls');
-                    this.el.addEventListener('click', function () {
-                        if (video.paused) {
-                            video.play();
-                            controls.setAttribute('src', '#pause');
-                        }else {
-                            video.pause();
-                            controls.setAttribute('src', '#play');
-                        }
-                    });
+                    video.play();
                 }
             });
     </script>
@@ -34,9 +25,8 @@
         <a-asset-item id="fridge" src="assets/fridge/scene.gltf"></a-asset-item>
         <a-asset-item id="door" src="assets/door/scene.gltf"></a-asset-item>
         <a-asset-item id="tv" src="assets/tv/scene.gltf"></a-asset-item>
-        <video id="aot" src="assets/tv/textures/AttackonTitan.mp4" loop="true"></video>
-        <img id="play" src="assets/tv/textures/play.png">
-        <img id="pause" src="assets/tv/textures/pause.png">
+        <video id="aot" src="assets/tv/textures/AttackonTitan.mp4" autoplay="true" loop="true"></video>
+        
     </a-assets>
     <a-sky color="#ECECEC"></a-sky>
     <a-entity position="54 1.5 12">
@@ -56,9 +46,7 @@
     <a-entity position="21.8 -0.6 -12" gltf-model="#fridge" scale="1 1 1"></a-entity>
     <a-entity position="40 2.3 10" gltf-model="#door" scale="3 2.5 4"></a-entity>
     <a-entity position="30 2 5" gltf-model="#tv" scale="1 1 1"></a-entity>
-    <a-video src="#aot" position="37 2 7" width="1" height="1">
-        <a-image id="videoControls" src="#play" position="30 1 5" scale="0.5 0.5 0.5" play-pause></a-image>
-    </a-video>
+    <a-video src="#aot" position="37 2 7" width="1" height="1"></a-video>
 
     <!-- <a-entity tv-screen class="intersectable" geometry="primitive: box; depth: 0.01; height: 1.4; width: 2.5" material="color: black" position="30 2 5"></a-entity> -->
     <!-- Ceiling -->
