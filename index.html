@@ -4,11 +4,11 @@
 
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
     <script>
-        AFRAME.registerComponent('teste', {
+        AFRAME.registerComponent('video_control', {
         init: function () {
           var entity = this.el;
           entity.addEventListener('click', () => {
-            var vid = document.querySelector('#video');
+            var vid = document.querySelector('#aot');
             //vid.play().then(()=>vid.pause()); // grants full access to the video
             //vid.muted = false;
             vid.play();
@@ -18,23 +18,20 @@
       
         AFRAME.registerComponent('scene-load', {
         init: function () {
-          var vid = document.querySelector('#video');
+          var vid = document.querySelector('#aot');
           vid.play().then(()=>vid.pause()); 
             }
         });
-        AFRAME.registerComponent('video_control', {
-                init: function() {
+        function playVideo () {
                     var video = document.querySelector('#aot');
                     vid.muted = false;
                     video.play();
             }
-        });
-        
     </script>
 </head>
 <body>
 
-<button class="unmute" onclick="play();"></button>
+<button onclick="playVideo();"></button>
 <a-scene background="color: #FAFAFA" scene-load>
     <a-assets>
         <a-asset-item id="couch" src="assets/couch/scene.gltf"></a-asset-item>
