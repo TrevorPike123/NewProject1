@@ -6,13 +6,9 @@
     <script>
         AFRAME.registerComponent('video_control', {
         init: function () {
-          var entity = this.el;
-          entity.addEventListener('click', () => {
-            var vid = document.querySelector('#aot');
-            //vid.play().then(()=>vid.pause()); // grants full access to the video
-            //vid.muted = false;
-            vid.play();
-                });
+            var video = document.querySelector('#aot');
+                    video.muted = false;
+                    video.play();
             }
         });
       
