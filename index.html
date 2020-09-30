@@ -58,7 +58,7 @@
 
     <a-obj-model src="assets/ANVILobj.obj" scale=".5 .5 .5" material="shader: standard; roughness: 1; src: url(images/anvil.jpg); repeat: 2 1" position= "64 -0.8 6 "></a-obj-model>
     <a-obj-model src="assets/mug2.obj" scale=".15 .15 .15" mtl="assets/mug2.mtl" position="28.5 1.8 -19"></a-obj-model>
-    <a-obj-model id="frontdoor" src="assets/door/door.obj" scale=".175 .15 .165" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="40.818 -0.5 10.05" rotation="0 270 0" class="intersectable"></a-obj-model>
+    <a-obj-model id="frontdoor" src="assets/door/door.obj" scale=".175 .15 .165" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="40.818 0 10.05" rotation="0 270 0" class="intersectable"></a-obj-model>
     <a-entity position="30 -0.5 0" gltf-model="#couch" scale=".007 .007 .007"></a-entity>
     <a-entity position="64 0.7 -18" gltf-model="#desk" scale=".03 .03 .03"></a-entity>
     <a-entity position="66.5 1.85 -18.5" gltf-model="#computer" scale="1.7 1.7 1.7"></a-entity>
@@ -125,7 +125,7 @@
     <!-- 40.818 2.16 10 -->
     <a-box material="color: blue;" 
         position="40.818 2.16 10" height="5" depth=".1" width="2"
-        event-set__1="_event: click; _target: #frontdoor; position: 40 -0.5 8.9;"
+        event-set__1="_event: click; _target: #frontdoor; position: 40 0 8.9;"
         event-set__2="_event: click; _target: #frontdoor; rotation: 0 0 0;"></a-box>
   
     <!-- <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="able"></a-box> -->
