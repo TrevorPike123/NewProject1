@@ -20,7 +20,7 @@
         <a-asset-item id="chair" src="assets/chair/scene.gltf"></a-asset-item>
         <a-asset-item id="cabnet" src="assets/cabnets/scene.gltf"></a-asset-item>
         <a-asset-item id="fridge" src="assets/fridge/scene.gltf"></a-asset-item>
-        <a-asset-item id="door" src="assets/door/scene.gltf"></a-asset-item>
+        <a-asset-item id="door1" src="assets/door/scene.gltf"></a-asset-item>
         <a-asset-item id="tv" src="assets/tv/scene.gltf"></a-asset-item>
         <a-asset-item id="entertainmentCenter" src="assets/entertainment_center/scene.gltf"></a-asset-item>
         <a-asset-item id="chandeller" src="assets/chandeller/scene.gltf"></a-asset-item>   
@@ -67,7 +67,7 @@
     <a-entity position="66.5 -.75 -15.1" gltf-model="#chair" scale=".009 .009 .009" rotation="0 180 0"></a-entity>
     <a-entity position="20.5 -0.5 -19.5" gltf-model="#cabnet" scale="30 30 30" ></a-entity>
     <a-entity position="21.5 -0.6 -12" gltf-model="#fridge" scale="1 1 1"></a-entity>
-    <a-entity position="40.818 2.16 10" gltf-model="#door" scale="3 2.5 4"></a-entity>
+    <a-entity position="40.818 2.16 10" gltf-model="#door1" scale="3 2.5 4"></a-entity>
     <a-entity position="38.1 5.2 -5" gltf-model="#chandeller" scale=".003 .003 .003"></a-entity>
     <a-entity position="30 0.4 9.2" gltf-model="#entertainmentCenter" scale="2.5 2.5 2.5" rotation="0 180 0"></a-entity>
     <a-entity position="75 -0.35 -18.8" gltf-model="#bookshelf" scale=".02 .02 .02"></a-entity>
@@ -92,7 +92,8 @@
     <a-plane position="37.5 2.5 9.9" rotation="0 180 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/off.jpg); repeat: 1 1"></a-plane>
     <a-plane position="18 2.5 -12" rotation="0 270 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/on.jpg); repeat: 1 1"></a-plane>
     <a-plane position="18 2.5 -10" rotation="0 270 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/off.jpg); repeat: 1 1"></a-plane>
-    <!-- livingroom -->
+
+    <!-- livingroom light functionality-->
     <a-box id="offfunction_livingroom" material="color: red; transparent: true; opacity: 0"
            position="37.5 2.5 9.9" height="0.5" depth="0.2" width="0.5"
            event-set__1="_event: click; _target: #Living_Light1; distance: 0.01;"
@@ -106,7 +107,7 @@
            event-set__2="_event: click; _target: #Living_Light2; distance: 15;"
            event-set__3="_event: click; _target: #Living_Light3; distance: 15;"
            event-set__4="_event: click; _target: #Living_Light4; distance: 25;"></a-box>
-    <!-- bedroom -->
+    <!-- bedroom light functionality-->
     <a-box id="offfunction_bedroom" material="color: red; transparent: true; opacity: 0"
            position="18 2.5 -10" height="0.5" depth="0.2" width="0.5"
            event-set__1="_event: click; _target: #Bedroom_Light1; distance: 0.01;"
@@ -141,7 +142,7 @@
     <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 7 -5" material="shader: flat; side: double; opacity: 1;
 src: url(images/whiteroof.jpg); repeat: 6 3"></a-entity>
     <!-- Floor -->
-    <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 -0.44 -5" material="shader: flat; side: double; opacity: 1;
+    <a-entity static-body collada-model geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 -0.44 -5" material="shader: flat; side: double; opacity: 1;
 src: url(images/tanflooring.jpg); repeat: 6 3"></a-entity>
 
     <!-- Trim -->
