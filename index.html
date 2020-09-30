@@ -85,20 +85,33 @@
     <a-plane position="30 3.5 9.65" rotation="0 180 0" event-set__click="src: assets/tv/textures/AttackonTitan.mp4" sound="maxDistance: 6; volume: 1;" width="5.5" height="3.5" src="images/black.jpg" loop="false"></a-plane>
     <a-plane position="38.5 2.5 9.9" rotation="0 180 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/on.jpg); repeat: 1 1"></a-plane>
     <a-plane position="37.5 2.5 9.9" rotation="0 180 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/off.jpg); repeat: 1 1"></a-plane>
-    <a-box id="switchfunction" material="color: red; transparent: true; opacity: 0"
+    <a-plane position="18 2.5 -18" rotation="0 90 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/on.jpg); repeat: 1 1"></a-plane>
+    <a-plane position="18 2.5 -18" rotation="0 90 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/off.jpg); repeat: 1 1"></a-plane>
+    <!-- livingroom -->
+    <a-box id="offfunction_livingroom" material="color: red; transparent: true; opacity: 0"
            position="37.5 2.5 9.9" height="0.5" depth="0.2" width="0.5"
            event-set__1="_event: click; _target: #Living_Light1; distance: 0.01;"
            event-set__2="_event: click; _target: #Living_Light2; distance: 0.01;"
            event-set__3="_event: click; _target: #Living_Light3; distance: 0.01;"
            event-set__4="_event: click; _target: #Living_Light4; distance: 0.01;"></a-box>
 
-    <a-box id="switchfunction" material="color: red; transparent: true; opacity: 0"
+    <a-box id="onfunction_livingroom" material="color: red; transparent: true; opacity: 0"
            position="38.5 2.5 9.9" height="0.5" depth="0.2" width="0.5"
            event-set__1="_event: click; _target: #Living_Light1; distance: 25;"
            event-set__2="_event: click; _target: #Living_Light2; distance: 15;"
            event-set__3="_event: click; _target: #Living_Light3; distance: 15;"
            event-set__4="_event: click; _target: #Living_Light4; distance: 25;"></a-box>
+    <!-- bedroom -->
+    <a-box id="offfunction_bedroom" material="color: red;
+           position="18 2.5 -18" height="0.5" depth="0.2" width="0.5" rotation="0 90 0"
+           event-set__1="_event: click; _target: #Living_Light1; distance: 0.01;"
+           event-set__2="_event: click; _target: #Living_Light2; distance: 0.01;"></a-box>
 
+    <a-box id="onfunction_bedroom" material="color: red;
+           position="18 2.5 -18" height="0.5" depth="0.2" width="0.5" rotation="0 90 0"
+           event-set__1="_event: click; _target: #Living_Light1; distance: 30;"
+           event-set__2="_event: click; _target: #Living_Light2; distance: 30;"></a-box>
+  
     <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="intersectable"></a-box>
     
     
@@ -110,8 +123,8 @@
 
     <a-light type="point" position="52.5 3.5 -6" light="distance: 15; color:#fffffb" id="Living_Light6"></a-light>
     <a-light type="point" position="52.5 3.5 -4" light="distance: 15; color: #fffffb" id="Living_Light7"></a-light>
-    <a-light type="point" position="3.2 3.5 -17.8" light="distance: 25; color: #fffffb" id="Bedroom_Light1"></a-light>
-    <a-light type="point" position="17.2 3.5 -17.8" light="distance: 25; color: #fffffb" id="Bedroom_Light2"></a-light>
+    <a-light type="point" position="3.2 3.5 -17.8" light="distance: 30; color: #fffffb" id="Bedroom_Light1"></a-light>
+    <a-light type="point" position="17.2 3.5 -17.8" light="distance: 30; color: #fffffb" id="Bedroom_Light2"></a-light>
    
     <!-- Ceiling -->
     <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 7 -5" material="shader: flat; side: double; opacity: 1;
