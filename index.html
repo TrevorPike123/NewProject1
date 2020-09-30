@@ -40,6 +40,7 @@
         <a-asset-item id="chair1" src="assets/woodenchair/chair.glb"></a-asset-item>
         <a-asset-item id="chair2" src="assets/woodenchair/chair.glb"></a-asset-item>
         <a-asset-item id="wall_light" src="assets/wall_light/scene.gltf"></a-asset-item>
+        <a-asset-item id="rug" src="assets/rug/scene.gltf"></a-asset-item>
     </a-assets>
     
     <!-- Camera and cursor -->
@@ -147,6 +148,9 @@
     <!-- Bedroom light switches -->
     <a-plane position="19.8 2.5 -9" rotation="0 270 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/on.jpg); repeat: 1 1"></a-plane>
     <a-plane position="19.8 2.5 -8" rotation="0 270 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/off.jpg); repeat: 1 1"></a-plane>
+
+    <!-- Bedroom rug -->
+    <a-entity position="10 1 -5" gltf-model="#rug" scale="1 1 1"></a-entity>
     
     <!-- Livingroom light functionality -->
     <a-box id="offfunction_livingroom" material="color: red; transparent: true; opacity: 0"
