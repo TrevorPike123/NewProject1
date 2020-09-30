@@ -12,6 +12,7 @@
 
 <a-scene background="color: #FAFAFA" scene-load>
 
+    <!-- Assets -->
     <a-assets>
         <a-asset-item id="couch" src="assets/couch/scene.gltf"></a-asset-item>
         <a-asset-item id="desk" src="assets/desk/scene.gltf"></a-asset-item>
@@ -41,7 +42,7 @@
         <a-asset-item id="wall_light" src="assets/wall_light/scene.gltf"></a-asset-item>
     </a-assets>
     
-    <a-sky color="#FFAA00"></a-sky>
+    <!-- Camera and cursor -->
     <a-entity position="54 1.5 12">
         <a-camera universal-controls>
             <a-entity cursor="fuse: true"
@@ -56,9 +57,17 @@
         </a-camera>
     </a-entity>
 
+    <!-- Sky -->
+    <a-sky color="#FFAA00"></a-sky>
+
+    <!-- Anvil -->
     <a-obj-model src="assets/ANVILobj.obj" scale=".5 .5 .5" material="shader: standard; roughness: 1; src: url(images/anvil.jpg); repeat: 2 1" position= "64 -0.8 6 "></a-obj-model>
+
+    <!-- Mug -->
     <a-obj-model src="assets/mug2.obj" scale=".15 .18 .15" mtl="assets/mug2.mtl" position="28.5 1.7 -19"></a-obj-model>
-    <a-obj-model id="frontdoor" src="assets/door/door.obj" scale=".175 .2 .165" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="40.83 -0.09 10.05" rotation="0 270 0" class="intersectable"></a-obj-model>
+
+    <!-- Front Door -->
+    <a-obj-model id="frontdoor" src="assets/door/door.obj" scale=".175 .15 .165" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="40.83 -0.12 10.05" rotation="0 270 0" class="intersectable"></a-obj-model>
 
     <!-- Couch -->
     <a-entity position="30 -0.5 0" gltf-model="#couch" scale=".007 .007 .007"></a-entity>
@@ -86,6 +95,8 @@
 
     <!-- Entertainment Center -->
     <a-entity position="30 0.4 9.2" gltf-model="#entertainmentCenter" scale="2.5 2.5 2.5" rotation="0 180 0"></a-entity>
+
+    <!-- Bookshelf -->
     <a-entity position="75 -0.35 -18.8" gltf-model="#bookshelf" scale=".02 .02 .02"></a-entity>
 
     <!-- Totoro figurine -->
@@ -170,13 +181,13 @@
     <!-- Open front door -->
     <a-box material="color: blue; transparent: true; opacity: 0" 
         position="40.818 2.16 10" height="5" depth=".1" width="2.5"
-        event-set__1="_event: click; _target: #frontdoor; position: 39.95 -0.09 8.9;"
+        event-set__1="_event: click; _target: #frontdoor; position: 39.95 -0.12 8.9;"
         event-set__2="_event: click; _target: #frontdoor; rotation: 0 0 0;"></a-box>
   
     <!-- Close front door -->
     <a-box material="color: blue; transparent: true; opacity: 0" 
         position="39.95 2.16 8.9" height="5" depth=".1" width="2.5" rotation="0 90 0"
-        event-set__1="_event: click; _target: #frontdoor; position: 40.83 -0.09 10.05;"
+        event-set__1="_event: click; _target: #frontdoor; position: 40.83 -0.12 10.05;"
         event-set__2="_event: click; _target: #frontdoor; rotation: 0 270 0;"></a-box>
 
     <a-box position="66.4 2.72 -18.35" material="color:blue; transparent: true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click"></a-box>
@@ -198,6 +209,7 @@
     <!-- Ceiling -->
     <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 7 -5" material="shader: flat; side: double; opacity: 1;
 src: url(images/whiteroof.jpg); repeat: 6 3"></a-entity>
+
     <!-- Floor -->
     <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 -0.44 -5" material="shader: flat; side: double; opacity: 1;
 src: url(images/tanflooring.jpg); repeat: 6 3"></a-entity>
