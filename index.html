@@ -48,7 +48,9 @@
             <a-entity cursor="fuse: true"
                     position="0 0 -.1"
                     geometry="primitive: ring; radiusInner: .001; radiusOuter: .0015"
-                    material="color: red; shader: flat">
+                    material="color: red; shader: flat"
+                    jump-ability
+                    kinematic-body>
             <a-animation begin="click" easing="ease-in" attribute="scale" dur="150"a
                     fill="forwards" from="0.1 0.1 0.1" to="1 1 1"></a-animation>
             <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500"
@@ -120,8 +122,8 @@
            event-set__3="_event: click; _target: #Bedroom_Light3; distance: 30;"
            event-set__4="_event: click; _target: #Bedroom_Light4; distance: 30;"></a-box>
   
-    <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="intersectable"></a-box>
-    
+    <!-- <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="intersectable"></a-box> -->
+    <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click"></a-box>
     
     <a-light type="ambient" color="#222"></a-light>
     <a-light type="point" position="38.1 5.6 -4" light="distance: 25; color: #fffffb" id="Living_Light1"></a-light>
