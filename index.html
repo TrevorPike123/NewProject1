@@ -20,7 +20,6 @@
         <a-asset-item id="chair" src="assets/chair/scene.gltf"></a-asset-item>
         <a-asset-item id="cabnet" src="assets/cabnets/scene.gltf"></a-asset-item>
         <a-asset-item id="fridge" src="assets/fridge/scene.gltf"></a-asset-item>
-        <a-asset-item id="door1" src="assets/door/scene.gltf"></a-asset-item>
         <a-asset-item id="tv" src="assets/tv/scene.gltf"></a-asset-item>
         <a-asset-item id="entertainmentCenter" src="assets/entertainment_center/scene.gltf"></a-asset-item>
         <a-asset-item id="chandeller" src="assets/chandeller/scene.gltf"></a-asset-item>   
@@ -59,6 +58,7 @@
 
     <a-obj-model src="assets/ANVILobj.obj" scale=".5 .5 .5" material="shader: standard; roughness: 1; src: url(images/anvil.jpg); repeat: 2 1" position= "64 -0.8 6 "></a-obj-model>
     <a-obj-model src="assets/mug2.obj" scale=".15 .15 .15" mtl="assets/mug2.mtl" position="28.5 1.8 -19"></a-obj-model>
+    <a-obj-model id="frontdoor" src="assets/door/door.obj" scale="1 1 1" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="40 1 7" class="intersectable"></a-obj-model>
     <a-entity position="30 -0.5 0" gltf-model="#couch" scale=".007 .007 .007"></a-entity>
     <a-entity position="64 0.7 -18" gltf-model="#desk" scale=".03 .03 .03"></a-entity>
     <a-entity position="66.5 1.85 -18.5" gltf-model="#computer" scale="1.7 1.7 1.7"></a-entity>
@@ -66,7 +66,6 @@
     <a-entity position="66.5 -.75 -15.1" gltf-model="#chair" scale=".009 .009 .009" rotation="0 180 0"></a-entity>
     <a-entity position="20.5 -0.5 -19.5" gltf-model="#cabnet" scale="30 30 30" ></a-entity>
     <a-entity position="21.5 -0.6 -12" gltf-model="#fridge" scale="1 1 1"></a-entity>
-    <a-entity position="40.818 2.16 10" gltf-model="#door1" scale="3 2.5 4" class="intersectable"></a-entity>
     <a-entity position="38.1 5.2 -5" gltf-model="#chandeller" scale=".003 .003 .003"></a-entity>
     <a-entity position="30 0.4 9.2" gltf-model="#entertainmentCenter" scale="2.5 2.5 2.5" rotation="0 180 0"></a-entity>
     <a-entity position="75 -0.35 -18.8" gltf-model="#bookshelf" scale=".02 .02 .02"></a-entity>
@@ -126,8 +125,8 @@
     <!-- 40.818 2.16 10 -->
     <a-box material="color: blue;" 
         position="40 2 10" height="3" depth="1" width="2"
-        event-set__1="_event: click; _target: #door1; position: 39 2.16 9;"
-        event-set__2="_event: click; _target: #door1; rotation: 0 90 0;"></a-box>
+        event-set__1="_event: click; _target: #frontdoor; position: 39 2.16 9;"
+        event-set__2="_event: click; _target: #frontdoor; rotation: 0 90 0;"></a-box>
   
     <!-- <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="able"></a-box> -->
     <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click"></a-box>
