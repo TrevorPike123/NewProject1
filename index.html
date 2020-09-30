@@ -66,7 +66,7 @@
     <a-entity position="66.5 -.75 -15.1" gltf-model="#chair" scale=".009 .009 .009" rotation="0 180 0"></a-entity>
     <a-entity position="20.5 -0.5 -19.5" gltf-model="#cabnet" scale="30 30 30" ></a-entity>
     <a-entity position="21.5 -0.6 -12" gltf-model="#fridge" scale="1 1 1"></a-entity>
-    <a-entity position="40.818 2.16 10" gltf-model="#door1" scale="3 2.5 4"></a-entity>
+    <a-entity position="40.818 2.16 10" gltf-model="#door1" scale="3 2.5 4" class="intersectable"></a-entity>
     <a-entity position="38.1 5.2 -5" gltf-model="#chandeller" scale=".003 .003 .003"></a-entity>
     <a-entity position="30 0.4 9.2" gltf-model="#entertainmentCenter" scale="2.5 2.5 2.5" rotation="0 180 0"></a-entity>
     <a-entity position="75 -0.35 -18.8" gltf-model="#bookshelf" scale=".02 .02 .02"></a-entity>
@@ -124,7 +124,7 @@
         
     <!-- Open front door -->
     <!-- 40.818 2.16 10 -->
-    <a-box id="opendoor_frontdoor" material="color: blue;" 
+    <a-box material="color: blue;" 
         position="40 2 10" height="3" depth="1" width="2"
         event-set__1="_event: click; _target: #door1; position: 39 2.16 9;"
         event-set__2="_event: click; _target: #door1; rotation: 0 90 0;"></a-box>
