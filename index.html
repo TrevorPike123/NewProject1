@@ -83,14 +83,21 @@
     <a-entity position="52 3.5 -5" gltf-model="#wall_light" scale="1 1 1" rotation="0 180 0"></a-entity>
     <a-entity geometry="primitive: box" position="30 3.5 9.8" scale="5.7 3.7 .24" material="shader: standard; roughness: 1; src: url(images/black.jpg); repeat: 4 2"></a-entity> 
     <a-plane position="30 3.5 9.65" rotation="0 180 0" event-set__click="src: assets/tv/textures/AttackonTitan.mp4" sound="maxDistance: 6; volume: 1;" width="5.5" height="3.5" src="images/black.jpg" loop="false"></a-plane>
-    <a-plane position="38.5 2.5 9.5" rotation="0 180 0" width="3" height="3" material="shader: standard; roughness: 1; src: url(images/On.png); repeat: 1 1"></a-plane>
+    <a-plane position="38.5 2.5 9.9" rotation="0 180 0" width="2" height="2" material="shader: standard; roughness: 1; src: url(images/On.png); repeat: 1 1"></a-plane>
     <!-- <a-box id="switchfunction" material="color: red;" -->
     <a-box id="switchfunction" material="color: red; transparent: true; opacity: 0"
-           position="38.5 2.5 9.5" height="1" depth="1" width="1"
+           position="39.5 2.5 9.5" height="0.5" depth="0.5" width="0.5"
            event-set__1="_event: click; _target: #Living_Light1; distance: 0.01;"
            event-set__2="_event: click; _target: #Living_Light2; distance: 0.01;"
            event-set__3="_event: click; _target: #Living_Light3; distance: 0.01;"
            event-set__4="_event: click; _target: #Living_Light4; distance: 0.01;"></a-box>
+
+    <a-box id="switchfunction" material="color: red; transparent: true; opacity: 0"
+           position="37.5 2.5 9.5" height="0.5" depth="0.5" width="0.5"
+           event-set__1="_event: click; _target: #Living_Light1; distance: 25;"
+           event-set__2="_event: click; _target: #Living_Light2; distance: 15;"
+           event-set__3="_event: click; _target: #Living_Light3; distance: 15;"
+           event-set__4="_event: click; _target: #Living_Light4; distance: 25;"></a-box>
 
     <a-box position="66.4 2.72 -18.35" material="color:blue; transparent:true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click" class="intersectable"></a-box>
     
