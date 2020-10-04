@@ -168,7 +168,7 @@
     <!-- Outside lights-->
 
     <!-- Livingroom lights -->
-    <!-- <a-light type="ambient" color="#222"></a-light> -->
+    <a-light type="ambient" color="#222"></a-light>
     <a-light type="point" position="38.1 5.6 -4" light="distance: 25; color: #fffffb" id="Living_Light1"></a-light>
     <a-light type="point" position="39.1 5.6 -5.5" light="distance: 15; color: #fffffb" id="Living_Light2"></a-light>
     <a-light type="point" position="38.1 5.6 -6" light="distance: 15; color: #fffffb" id="Living_Light3"></a-light>
@@ -277,11 +277,11 @@
     <a-box position="66.4 2.72 -18.35" material="color:blue; transparent: true; opacity:0" depth=".5" height="1" width="1.5" sound="src: url(assets/computer/Dio.mp3); on: click"></a-box>
    
     <!-- Ceiling -->
-    <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 7 -5" material="shader: flat; side: double; opacity: 1;
+    <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 7 -5" material="shader: standard; 
 src: url(images/whiteroof.jpg); repeat: 6 3"></a-entity>
 
     <!-- Floor -->
-    <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 -0.44 -5" material="shader: flat; side: double; opacity: 1;
+    <a-entity static-body geometry="primitive: box; depth: 30; height: 0.1; width: 80" position="40 -0.44 -5" material="shader: standard;
 src: url(images/tanflooring.jpg); repeat: 6 3"></a-entity>
 
     <!-- Trim -->
