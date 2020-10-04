@@ -63,7 +63,8 @@
     <!-- Camera and cursor -->
     <a-entity position="54 1.5 12">
         <a-camera universal-controls>
-            <a-cursor
+            <a-entity 
+                    cursor="fuse: false"
                     position="0 0 -.1"
                     geometry="primitive: ring; radiusInner: .001; radiusOuter: .0015"
                     material="color: black; shader: flat">
