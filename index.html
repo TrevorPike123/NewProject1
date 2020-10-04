@@ -13,14 +13,13 @@
                 var covidOn = false;
                 var babycrib = document.querySelector('#covidCrib');
 
-                babycrib.setAttribute('hidden', true);
+                babycrib.setAttribute('visible', false);
 
                 function cribFunctionality(){
                     babycrib.setAttribute('hidden', !babycrib.getAttribute('hidden'));
                 }
 
                 covidSwitch.addEventListener('click', function(evt){
-                    covidOn == !covidOn;
                     if(covidOn == true){
                         cribFunctionality();
 
