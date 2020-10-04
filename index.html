@@ -13,19 +13,22 @@
                 var covidOn = false;
                 var babycrib = document.querySelector('#covidCrib');
 
-                babycrib.setAttribute('visible', false);
+                babycrib.setAttribute('hidden', true);
 
                 function cribFunctionality(){
-                    babycrib.setAttribute('visible', !babycrib.getAttribute('visible'));
+                    babycrib.setAttribute('hidden', !babycrib.getAttribute('hidden'));
                 }
 
-                covid_button.addEventListener('click', function(evt){
+                covidSwitch.addEventListener('click', function(evt){
+                    covidOn == !covidOn;
                     if(covidOn == true){
                         cribFunctionality();
+
                     }
                     else if(covidOn == false){
                         cribFunctionality();
                     }
+                    covidOn == !covidOn;
                 })
             }
         })
