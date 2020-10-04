@@ -71,10 +71,10 @@
     <a-obj-model id="frontdoor" src="assets/door/door.obj" scale=".182 .162 .17" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="40.83 -0.25 10.05" rotation="0 270 0" class="intersectable"></a-obj-model>
 
     <!-- Bedroom Door -->
-    <a-obj-model id="bedroomdoor" src="assets/door/door.obj" scale=".182 .162 .17" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="20.2 -0.25 -8.1" class="intersectable"></a-obj-model>
+    <a-obj-model id="bedroomdoor" src="assets/door/door.obj" scale=".182 .162 .17" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="20.2 -0.25 -8.15" class="intersectable"></a-obj-model>
 
     <!-- Computerroom Door -->
-    <a-obj-model id="computerdoor" src="assets/door/door.obj" scale=".182 .162 .17" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="60.2 -0.25 -8.2" rotation="0 180 0" class="intersectable"></a-obj-model>
+    <a-obj-model id="computerdoor" src="assets/door/door.obj" scale=".182 .162 .17" material="shader: standard; roughness: 1; src: url(images/tan.png); repeat: 2 1" position="60 -0.25 -8.2" rotation="0 180 0" class="intersectable"></a-obj-model>
 
     <!-- Couch -->
     <a-entity position="30 -0.5 0" gltf-model="#couch" scale=".007 .007 .007"></a-entity>
@@ -213,7 +213,7 @@
     <!-- Close bedroom door -->
     <a-box material="color: blue; transparent: true; opacity: 0"
 `       position="18.8 2.16 -7.26" height="5" depth=".1" width="2.5"
-        event-set__1="_event: click; _target: #bedroomdoor; position: 20.1 -0.25 -8.1"
+        event-set__1="_event: click; _target: #bedroomdoor; position: 20.1 -0.25 -8.15"
         event-set__2="_event: click; _target: #bedroomdoor; rotation: 0 0 0"></a-box>
 
     <!-- Open computerroom door -->
