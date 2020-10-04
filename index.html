@@ -6,6 +6,30 @@
     <script src="libs/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <script>
+        AFRAME.registerComponent('scene', {
+            init: function(){
+                var covid_button = document.querySelector('#covidSwitch');
+                var covidOn = false;
+                var babycrib = document.querySelector('#covidCrib');
+
+                babycrib.setAttribute('visible', false);
+
+                function cribFunctionality(){
+                    babycrib.setAttribute('visible', !babycrib.getAttribute('visible'));
+                }
+
+                covid_button.addEventListener('click', function(evt){
+                    if(covidOn == true){
+                        cribFunctionality();
+                    }
+                    else if(covidOn == false){
+                        cribFunctionality();
+                    }
+                })
+            }
+        })
+    </script>
 
 </head>
 <body>
@@ -126,7 +150,7 @@
     <a-entity position="1.7 0.95 -5" gltf-model="#dresser" scale="2.5 2.5 2.5" rotation="0 180 0"></a-entity>
 
     <!-- Crib -->
-    <a-entity position="76.5 -0.5 -5" gltf-model="#crib" scale="3.5 3.5 3.5" rotation="0 270 0"></a-entity>
+    <a-entity id="covidCrib" position="76.5 -0.5 -5" gltf-model="#crib" scale="3.5 3.5 3.5" rotation="0 270 0"></a-entity>
 
     <!-- Bedroom Lamps -->
     <a-entity position="3.2 -0.3 -17.8" gltf-model="#lamp1" scale="3 3 3"></a-entity>
@@ -192,7 +216,9 @@
     <a-light type="point" position="66 3 -5" light="distance: 12; color: #fffffb" id="Computerroom_Light5"></a-light>
     <a-light type="point" position="78 3 -5" light="distance: 12; color: #fffffb" id="Computerroom_Light6"></a-light>
    
-    
+    <!-- Covid switch -->
+    <a-box id="covidSwitch" material="color: yellow;"
+        position="62 2.5 -4" height="0.5" depth="0.5" width="0.5"></a-box>
     <!-- Turn tv on -->
     <!-- <a-box id="tv_turn_on" material=color red -->
 
