@@ -8,24 +8,16 @@
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
     <script>
         AFRAME.registerComponent('scene', {
-            init: function(){
+            init: function() {
                 var covid_button = document.querySelector('#covidSwitch');
-                var covidOn = false;
-                var babycrib = document.querySelector('#covidCrib');
+                var babycrib = document.querySelector('#covidCrib'); 
 
                 function cribFunctionality(){
                     babycrib.setAttribute('visible', !babycrib.getAttribute('visible'));
                 }
 
-                covidSwitch.addEventListener('click', function(evt){
-                    if(covidOn == true){
-                        cribFunctionality();
-
-                    }
-                    else if(covidOn == false){
-                        cribFunctionality();
-                    }
-                    covidOn == !covidOn;
+                covid_button.addEventListener('click', function(evt){
+                    cribFunctionality();
                 })
             }
         });
