@@ -42,32 +42,13 @@ I was able to use a box item in order to toggle the visibility of my covid objec
 ![ScreenShot](/demo_images/covidOff.png)
 ![ScreenShot](/demo_images/covidOn.png)
 
-### Issues
-While doing my project I ran into many issues on the way, but there were two issues that gave me the most problem. My first issue was trying to find a way to have one object affect other objects. I spent countless hours trying to learn complicated JavaScript code to do a task that I thought was fairly simple. I came across a website after searching google which gave me a simple solution to my problem. 
-
-<a href="https://www.npmjs.com/package/aframe-event-set-component">aframe-event-set-component</a>
-
-This simple a-frame component addon fixed all the issues that I was having.
-
-The second issue I had was trying to optimize my house to run better. My first implementation of my code had about 30 assets, multiple rooms, multiple lights, and high resolution textures. I quickly found out that this made my code sluggish and laggy. I ended up removing about 12 assets that were high resolution and pointless, and stick to two rooms. I found a very interesting article about aframe optimization that really helped me improve my performance while still meeting all the requirements.
-
-<a href=https://hacks.mozilla.org/2017/07/optimizing-performance-of-a-frame-scenes-for-mobile-devices/>Optimizing Performance of A_Frame Scenes for Mobile Devices</a>
-
-This article had very many interesting facts about aframe optimization, for example, using textures that are powers of two helps ensure optimal memory use. 
+### Complications
+There were a number of issues I ran into with this project. The first was being new to aframe and js as well as html. I had to do a lot of legwork on learning how to make a VR application with aframe before I began adding assets to my index.html file. The second complication came with my mp4 file I added to my television asset. I was able to change the src file by using a variable to check for if the tv was on or not and using an EventListener on the tv asset. This worked well with one exception, I was not able to access the sound portion of the video file in order to stop the audio that was part of the mp4 file. Thus the sound file would continue to play even after the video had been changed to off. I worked hard to fix this issue but in the end ran out of time unfortunately. I kept the mp4 file to keep the tv interactive because it was my favorite part of the project.
 
 ### Conclusion
 In conclusion, I think that this project was a good stepping stone into learing how to code in virtual reality. A learned the basics of aframe and I now feel confident in my ability to code using it. I plan on coming back to this project in the future and improving it even more. Some improvements I would like to make is making an outside area, and making multiple levels(upstairs and downstairs). 
-
-### Contribution
-- Created by Jordan Coe.
 
 ### Objects and Interactions
 19 Unique Models
 
 <a href="https://github.com/JuJoCoe/JuJoCoe.github.io/blob/master/assets/Assetsworkcited.txt">Assets Used</a>
-
-4 Interactions
-- The user may interact with the light switches in the living room. The on switch is on the left, while the off switch is on the right.
-- The dynamic object is the door. The user may open and close the door.
-- The choose your color boxes in the bedroom. The user can choose 1 of 4 colors, and all the lights inside the bedroom will match the color. 
-- When the user goes up to the laptop sitting on the desk, the laptop will make a startup sound. 
