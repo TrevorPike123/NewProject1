@@ -23,6 +23,7 @@
 
                 function turnTvOff(){
                     tvScreen.setAttribute('src', "assets/tv/textures/blackScreen.mp4");
+                    tvScreen.setAttribute('volume', "0");
                 }
 
                 tvScreen.addEventListener('click', function(evt) {
@@ -32,6 +33,7 @@
                     }
                     else if(tvOn == true) {
                         turnTvOff();
+                        
                         tvOn = false;
                     }
                 })
