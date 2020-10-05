@@ -19,12 +19,10 @@
 
                 function turnTvOn(){
                     tvScreen.setAttribute('src', "assets/tv/textures/AttackonTitan.mp4");
-                    tvScreen.setAttribute('muted', "false");
                 }
 
                 function turnTvOff(){
-                    tvScreen.setAttribute('muted', "true");
-                    tvScreen.setAttribute('src', "assets/tv/textures/blackScreen.mp4");
+                    tvScreen.setAttribute('visible', 'false');
                 }
 
                 tvScreen.addEventListener('click', function(evt) {
@@ -34,7 +32,6 @@
                     }
                     else if(tvOn == true) {
                         turnTvOff();
-                        
                         tvOn = false;
                     }
                 })
