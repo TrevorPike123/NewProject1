@@ -183,8 +183,7 @@
 
     <!-- TV -->
     <a-entity geometry="primitive: box" position="30 3.5 9.8" scale="5.7 3.7 .24" material="shader: standard; roughness: 1; src: url(images/black.jpg); repeat: 4 2"></a-entity> 
-    <a-plane id="screen" position="30 3.5 9.65" rotation="0 180 0" sound="maxDistance: 6; volume: 1;" width="5.5" height="3.5" src="images/black.jpg" loop="false"
-        event-set__click="src: assets/tv/textures/AttackonTitan.mp4; loop: false"></a-plane>
+    <a-plane id="screen" position="30 3.5 9.65" rotation="0 180 0" sound="maxDistance: 6; volume: 1;" width="5.5" height="3.5" src="images/black.jpg"></a-plane> 
 
     <!-- Livingroom light switches -->
     <a-plane position="38.5 2.5 9.9" rotation="0 180 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/on.jpg); repeat: 1 1"></a-plane>
@@ -228,8 +227,6 @@
     <!-- Covid switch -->
     <a-box id="covidSwitch" material="color: yellow;"
         position="69 2.5 9.8" height="0.5" depth="0.5" width="0.5"></a-box>
-    <!-- Turn tv on -->
-    <!-- <a-box id="tv_turn_on" material=color red -->
 
     <!-- Livingroom light functionality -->
     <a-box id="offfunction_livingroom" material="color: red; transparent: true; opacity: 0"
