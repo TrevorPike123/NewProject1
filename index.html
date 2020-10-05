@@ -19,10 +19,11 @@
 
                 function turnTvOn(){
                     tvScreen.setAttribute('src', "assets/tv/textures/AttackonTitan.mp4");
+                    tvScreen.setAttribute('muted', "false");
                 }
 
                 function turnTvOff(){
-                    tvScreen.removeAttribute('src');
+                    tvScreen.setAttribute('muted', "true");
                     tvScreen.setAttribute('src', "assets/tv/textures/blackScreen.mp4");
                 }
 
