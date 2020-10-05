@@ -12,6 +12,7 @@
                 var covid_button = document.querySelector('#covidSwitch');
                 var babycrib = document.querySelector('#covidCrib'); 
                 var tvScreen = document.querySelector('#screen');
+                var aotSound = document.querySelector('')
                 var tvOn = false;
                 function cribFunctionality(){
                     babycrib.setAttribute('visible', !babycrib.getAttribute('visible'));
@@ -22,7 +23,7 @@
                 }
 
                 function turnTvOff(){
-                    tvScreen.setAttribute('visible', 'false');
+                    tvScreen.setAttribute('src', "assets/tv/textures/blackScreen.mp4");
                 }
 
                 tvScreen.addEventListener('click', function(evt) {
@@ -78,6 +79,7 @@
         <a-asset-item id="wall_light" src="assets/wall_light/scene.gltf"></a-asset-item>
         <a-asset-item id="rug" src="assets/rug/scene.gltf"></a-asset-item>
         <a-asset-item id="outside_light" src="assets/outside_light/scene.gltf"></a-asset-item>
+        <audio id="aotMusic" src="assets/tv/textures/AttackonTitan.mp3"></audio>
     </a-assets>
     
     <!-- Camera and cursor -->
@@ -183,7 +185,7 @@
 
     <!-- TV -->
     <a-entity geometry="primitive: box" position="30 3.5 9.8" scale="5.7 3.7 .24" material="shader: standard; roughness: 1; src: url(images/black.jpg); repeat: 4 2"></a-entity> 
-    <a-plane id="screen" position="30 3.5 9.65" rotation="0 180 0" sound="maxDistance: 6; volume: 1;" width="5.5" height="3.5" src="images/black.jpg"></a-plane> 
+    <a-plane id="screen" position="30 3.5 9.65" rotation="0 180 0" sound="src: #aotMusic" width="5.5" height="3.5" src="images/black.jpg"></a-plane> 
 
     <!-- Livingroom light switches -->
     <a-plane position="38.5 2.5 9.9" rotation="0 180 0" width="0.5" height="0.5" material="shader: standard; roughness: 1; src: url(images/on.jpg); repeat: 1 1"></a-plane>
