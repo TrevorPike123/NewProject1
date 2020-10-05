@@ -11,12 +11,32 @@
             init: function() {
                 var covid_button = document.querySelector('#covidSwitch');
                 var babycrib = document.querySelector('#covidCrib'); 
-
+                var tvScreen = document.querySelector('screen')
+                var tvOn = false;
                 function cribFunctionality(){
                     babycrib.setAttribute('visible', !babycrib.getAttribute('visible'));
                 }
 
-                covid_button.addEventListener('click', function(evt){
+                function turnTvOn(){
+                    tvScreen.setAttribute('src', assets/tv/textures/AttackonTitan.mp4);
+                }
+
+                function turnTvOff(){
+                    tvScreen.setAttribute('src', images/black.jpg);
+                }
+
+                tvScreen.addEventListener('click', function(evt) {
+                    if(tvOn == false) {
+                        turnTvOn();
+                        tvOn = true;
+                    }
+                    else if(tvOn == true) {
+                        turnTvOff();
+                        tvOn = false;
+                    }
+                })
+
+                covid_button.addEventListener('click', function(evt) {
                     cribFunctionality();
                 })
             }
