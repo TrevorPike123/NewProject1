@@ -20,10 +20,12 @@
 
                 function turnTvOn(){
                     tvScreen.setAttribute('src', "assets/tv/textures/AttackonTitan.mp4");
+                    tvScreen.components.sound.playSound();
                 }
 
                 function turnTvOff(){
                     tvScreen.setAttribute('src', "assets/tv/textures/blackScreen.mp4");
+                    tvScreen.components.sound.stopSound();
                 }
 
                 tvScreen.addEventListener('click', function(evt) {
